@@ -10,20 +10,22 @@ import './App.css'
 
 const  App = () =>{
   return (
-  //  <Router>
+   <Router>
+   <div className="app">
+   <NavBar />
+   <Switch>
+   <Route exact path="/" component={Home} />
+   <Route exact path="/about" component={About} />
+   <Route exact path="/skills" component={Skills} />
+   <Route exact path="/works" component={Projects} />
+   <Route exact path="/contact" component={Contact} />
+   </Switch>
+   <Footer />
+   </div>
+   </Router>
   //  <div className="app">
-  //  <NavBar />
-  //  <Switch>
-  //  <Route exact path="/" component={Home} />
-  //  <Route exact path="/about" component={About} />
-  //  <Route exact path="/skills" component={Skills} />
-  //  <Route exact path="/works" component={Projects} />
-  //  <Route exact path="/contact" component={Contact} />
-  //  </Switch>
-  //  <Footer />
+  //    <NavBar />
   //  </div>
-  //  </Router>
-  <div className="app"></div>
 
   );
 }

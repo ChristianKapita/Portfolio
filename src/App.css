@@ -1,19 +1,54 @@
-.app {
+/* .app {
   display: flex;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 15px;
-  min-height: 100vh;
+  margin: 0px auto;
+  max-width: 1280%;
+  padding: 0 15px; */
+  /* padding: 30px; */
+  /* min-height: 100vh;
   border-radius: 10px;
   flex-direction: column;
-  /* background-color: #ffffff; */
-  background-image: url(./images/background.png);
-}
+  /* //background-color: #ffffff; */
+  /* background-image: url(./images/background.png);
+}  */
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   .app {
     padding: 0 100px;
     margin-top: 5vh;
     min-height: 90vh;
   }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+condensed:wght@300&display=swap');
+:root {
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark :rgb(255,255,255,0);
+}
+
+body{
+  font-family:"Roboto condensed" sans-serif;
+}
+
+/* ------------------------NAVBAR------------------------- */
+nav a.nav-link{
+  /* font-weight: 500; */
+  letter-spacing:0.0375rem;
+  cursor: pointer;
+}
+nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark);
+
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus  {
+  border-top:0.1875rem solid var(--primary-orange);
+}
+.navbar-nav > li > a:hover {
+  border-top:0.1875rem solid var(--primary-orange);
 }
