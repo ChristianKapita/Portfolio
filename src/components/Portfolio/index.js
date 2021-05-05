@@ -112,10 +112,10 @@ const Portfolio = () => {
     const content = (
       <>
         <img className="portfolio-image-popupbox" src={CodWeb} alt="Employee Directory..." />
-        <p>API based React application that generates a list of random employees and allows user to search a specific employee or sort the list either by name, phone or email.</p>
-        <b>Live Application:</b> <a className="hyper-link" onClick={() => window.open("https://christiankapita.github.io/employee-directory/", "_blank")}>https://christiankapita.github.io/employee-directory/</a>
+        <p>This application will allow web developers to create an account on this social media platform to upload coding tips, user experiences and share projects for other users to see. Each user will have their own account with information that they provide which is stored into the database. This can be updated or deleted later on.</p>
+        <b>Live Application:</b> <a className="hyper-link" onClick={() => window.open("https://group2-project2.herokuapp.com/", "_blank")}>https://group2-project2.herokuapp.com/</a>
         <br />
-        <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/ChristianKapita/employee-directory", "_blank")}>https://github.com/ChristianKapita/employee-directory</a>
+        <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/GuilleMGN/Group2-Project2", "_blank")}>https://github.com/GuilleMGN/Group2-Project2</a>
       </>
     )
     PopupboxManager.open({ content })
