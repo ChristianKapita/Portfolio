@@ -17,12 +17,6 @@ const Home = () => {
           <button>More Info</button>
         </Link>
       </div>
-      {/* <div className="person">
-        <img
-          src={profilePic}
-          alt="person picture"
-        />
-      </div> */}
     </div>
   );
 };
