@@ -1,28 +1,178 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-import "./style.css";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
 
-const About = () => {
+const Contacts = () => {
+  const [successMessage, setSuccessMessage] = useState("");
+  const { register, handleSubmit, errors } = useForm();
+
+  const serviceID = "service_ID";
+  const templateID = "template_ID";
+  const userID = "user_0gKQAvWv9TBcJvQbyfENE";
+
+  const onSubmit = (data, r) => {
+    sendEmail(
+      serviceID,
+      templateID,
+      {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        subject: data.subject,
+        description: data.description
+      },
+      userID
+    )
+    r.target.reset();
+  }
+
+  const sendEmail = (serviceID, templateID, variables, userID) => {
+    emailjs.send(serviceID, templateID, variables, userID)
+      .then(() => {
+        setSuccessMessage("Form sent successfully! I'll contact you as soon as possible.");
+      }).catch(err => console.error(`Something went wrong ${err}`));
+  }
+
   return (
-    <div className="contact">
-      <h1>Contact me!</h1>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12217.686702386945!2d-4.237703507654698!3d55.84799239237255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4822cab96021be31!2sGlasgow%20Green!5e0!3m2!1sen!2suk!4v1610050447718!5m2!1sen!2suk"
-        frameBorder="0"
-        allowFullScreen=""
-        aria-hidden="false"
-        tabIndex="0"
-      ></iframe>
-
-      <h4>Phone</h4>
-      <p>0141 000 0000</p>
-
-      <h4>Email</h4>
-      <p>email@grmail.com</p>
-
-      <h4>Address</h4>
-      <p>Greendyke St, Saltmarket, Glasgow G1 5DB</p>
+    <div id="contacts" className="contacts">
+      <div className="text-center">
+        <h1>contact me</h1>
+        <p>Please fill out the form and I'll contact you as soon as possible.</p>
+        <span className="success-message">{successMessage}</span>
+      </div>
+      <div className="container">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="row">
+            <div className="col-md-6 col-xs-12">
+              {/* NAME INPUT */}
+              <div className="text-center">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Name"
+                  name="name"
+                  ref={
+                    register({
+                      required: "Please enter your name",
+                      maxLength: {
+                        value: 20,
+                        message: "Please enter a name with fewer than 20 characters"
+                      }
+                    })
+                  }
+                  // {...register("name",{required: "Please enter your name",
+                  // maxLength: {
+                  //   value: 20,
+                  //   message: "Please enter a name with fewer than 20 characters"
+                  // }}) }
+                />
+                <div className="line"></div>
+              </div>
+              <span className="error-message">
+                {errors.name && errors.name.message}
+              </span>
+              {/* PHONE INPUT */}
+              <div className="text-center">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Phone Number"
+                  name="phone"
+                  ref={
+                    register({
+                      required: "Please add your phone number",
+                    })
+                  }
+                  // {... register('phone',{
+                  //   required: "Please add your phone number",
+                  // })}
+                />
+                <div className="line"></div>
+              </div>
+              <span className="error-message">
+                {errors.phone && errors.phone.message}
+              </span>
+              {/* EMAIL INPUT */}
+              <div className="text-center">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
+                  name="email"
+                  ref={
+                    register({
+                      required: "Please provide you email",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "invalid Email"
+                      }
+                    })
+                  }
+                  // {...register('email',{
+                  //   required: "Please provide you email",
+                  //   pattern: {
+                  //     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  //     message: "invalid Email"
+                  //   }
+                  // })}
+                />
+                <div className="line"></div>
+              </div>
+              <span className="error-message">
+                {errors.email && errors.email.message}
+              </span>
+              {/* SUBJECT INPUT */}
+              <div className="text-center">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Subject"
+                  name="subject"
+                  ref={
+                    register({
+                      required: "OOPS, you forget to add the subject.",
+                    })
+                  }
+                  // {... register('subject',{
+                  //   required: "OOPS, you forget to add the subject.",
+                  // } )}
+                />
+                <div className="line"></div>
+              </div>
+              <span className="error-message">
+                {errors.subject && errors.subject.message}
+              </span>
+            </div>
+            <div className="col-md-6 col-xs-12">
+              {/* DESCRIPTION */}
+              <div className="text-center">
+                <textarea
+                  type="text"
+                  className="form-control"
+                  placeholder="Please type your message here....."
+                  name="description"
+                  ref={
+                    register({
+                      required: "Please type your message here...",
+                    })
+                  }
+                  // {...register('description',{
+                  //   required: "Please describe shortly your project needs...",
+                  // })}
+                  
+                ></textarea>
+                <div className="line"></div>
+              </div>
+              <span className="error-message">
+                {errors.description && errors.description.message}
+              </span>
+              <button className="btn-main-offer contact-btn" type="submit">contact me</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default Contacts;
