@@ -39,7 +39,7 @@ const Footer = () => {
                 {/* <a className="footer-nav">Portfolio</a> */}
                 <br />
                 <Link smooth={true} to="contacts" className="footer-nav">Contacts</Link>
-                <a className="footer-nav">Contacts</a>
+                {/* <a className="footer-nav">Contacts</a> */}
               </div>
             </div>
           </div>
