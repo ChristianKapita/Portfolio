@@ -32,10 +32,13 @@ const Footer = () => {
                 <Link smooth={true} to="home" className="footer-nav">Home</Link>
                 {/* <a className="footer-nav">Home</a> */}
                 <br />
-                <a className="footer-nav">About me</a>
+                <Link smooth={true} to="about" className="footer-nav">About me</Link>
+                {/* <a className="footer-nav">About me</a> */}
                 <br />
-                <a className="footer-nav">Portfolio</a>
+                <Link smooth={true} to="portfolio" className="footer-nav">Portfolio</Link>
+                {/* <a className="footer-nav">Portfolio</a> */}
                 <br />
+                <Link smooth={true} to="contacts" className="footer-nav">Contacts</Link>
                 <a className="footer-nav">Contacts</a>
               </div>
             </div>

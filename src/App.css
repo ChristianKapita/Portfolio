@@ -210,7 +210,22 @@ justify-content: center;
   position: relative;
   margin: 1rem;
 }
-
+/*---------BUTTONS--------------*/
+.btn-portfolio {
+  border: 1px solid var(--primary-orange);
+  border-radius: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: var(--primary-black);
+  margin: 2rem;
+justify-content: center;
+}
+.btn-portfolio:hover {
+  text-decoration: none;
+  background-color: var(--primary-orange);
+  color: var(--primary-black);
+  transition:  .2s ease-in-out;
+}
 /*------------ OVERFLOW BOX ------------------*/
 .overflow {
   position: absolute;
@@ -222,6 +237,8 @@ justify-content: center;
   border: 1px solid var(--primary-red);
   cursor: pointer;
 }
+
+
 
 .portfolio-image-box:hover .overflow {
   opacity: 60%;
