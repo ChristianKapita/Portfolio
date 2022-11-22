@@ -1,6 +1,6 @@
 import React from "react";
 import author from "../../Chris.png"
-import resume from "../../documents/Christian_KapitaMubakilay_Resume.pdf";
+import resume from "../../documents/Christian Mubakilay Kapita _ Resume.pdf";
 
 const AboutMe = () => {
   return (
