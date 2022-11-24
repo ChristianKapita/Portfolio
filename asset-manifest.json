@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2b968079.chunk.css",
-    "main.js": "/portfolio/static/js/main.eccab8d1.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.eccab8d1.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.050fb3f5.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.050fb3f5.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.aceeba95.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.aceeba95.js.map",
     "static/css/2.ee3ae976.chunk.css": "/portfolio/static/css/2.ee3ae976.chunk.css",
@@ -17,7 +17,7 @@
     "static/media/App.css": "/portfolio/static/media/Background.ecfaa3be.png",
     "static/media/Budget_tracker.7671cbab.PNG": "/portfolio/static/media/Budget_tracker.7671cbab.PNG",
     "static/media/Chris.86af24b5.png": "/portfolio/static/media/Chris.86af24b5.png",
-    "static/media/Christian_KapitaMubakilay_Resume.4b032835.pdf": "/portfolio/static/media/Christian_KapitaMubakilay_Resume.4b032835.pdf",
+    "static/media/Christian Mubakilay Kapita _ Resume.90915bb1.pdf": "/portfolio/static/media/Christian Mubakilay Kapita _ Resume.90915bb1.pdf",
     "static/media/EmployeDirectory.af218470.PNG": "/portfolio/static/media/EmployeDirectory.af218470.PNG",
     "static/media/Weather_DashBoard.754e15b7.PNG": "/portfolio/static/media/Weather_DashBoard.754e15b7.PNG",
     "static/media/codWeb.79aee3d6.PNG": "/portfolio/static/media/codWeb.79aee3d6.PNG",
@@ -28,6 +28,6 @@
     "static/css/2.ee3ae976.chunk.css",
     "static/js/2.d7358839.chunk.js",
     "static/css/main.2b968079.chunk.css",
-    "static/js/main.eccab8d1.chunk.js"
+    "static/js/main.050fb3f5.chunk.js"
   ]
 }
